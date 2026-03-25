@@ -1,0 +1,44 @@
+Μην κατεβάσεις όλο το ultralytics ξανά αν απέτυχε πριν.
+
+Κάνε:
+
+pip install ultralytics --no-cache-dir
+
+Αυτό είναι σημαντικό γιατί:
+
+--no-cache-dir = δεν γεμίζει την SD
+
+Μετά κατέβασε μόνο το μικρό model:
+
+wget https://github.com/ultralytics/assets/releases/download/v0.0.0/yolov8n.pt
+
+Το μέγεθος είναι μόνο περίπου:
+
+6 MB
+3️⃣ Εγκατάσταση Voice Recognition (Vosk small)
+
+Εγκατάσταση:
+
+pip install vosk sounddevice --no-cache-dir
+
+Κατέβασε το μικρό model:
+
+wget https://alphacephei.com/vosk/models/vosk-model-small-en-us-0.15.zip
+unzip vosk-model-small-en-us-0.15.zip
+
+Μέγεθος:
+
+≈ 50 MB
+4️⃣ Εγκατάσταση Speech (Piper TTS)
+
+Πρώτα install:
+
+pip install piper-tts --no-cache-dir
+
+Μετά κατέβασε φωνή:
+
+wget https://huggingface.co/rhasspy/piper-voices/resolve/main/en/en_US/lessac/medium/en_US-lessac-medium.onnx
+
+Μέγεθος:
+
+≈ 63 MB
