@@ -1,7 +1,8 @@
 # Leonardo re
 
 robot_assistant/
-\n main.py
+
+main.py
 speech.py
 listener.py
 navigation.py
