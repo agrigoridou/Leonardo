@@ -4,7 +4,6 @@ from navigation import navigate_to
 from utils import extract_place
 from gui import RobotGUI
 import threading
-import time
 
 gui = RobotGUI()
 
@@ -25,8 +24,10 @@ def assistant_loop():
             if place:
                 gui.talking()
                 speak(f"Σε πηγαίνω στο {place}")
-                time.sleep(1)
+
+            
                 navigate_to(place)
+
                 gui.idle()
             else:
                 gui.error()
@@ -35,6 +36,7 @@ def assistant_loop():
         else:
             gui.error()
             speak("Δεν κατάλαβα την εντολή")
+
 
 threading.Thread(target=assistant_loop, daemon=True).start()
 gui.run()
