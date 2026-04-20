@@ -26,3 +26,8 @@ pip install pyttsx3 SpeechRecognition pyaudio
 
 ## ΕΚΤΕΛΕΣΗ
 python3 main.py
+
+
+## Next Update
+
++1  Να προσθέσουμε wake word: “Hey robot”,
