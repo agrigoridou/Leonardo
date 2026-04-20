@@ -15,7 +15,6 @@ class RobotGUI:
 
         self.draw_face()
 
-        # 👉 START animation σωστά
         self.root.after(1000, self.move_eyes)
 
     def draw_face(self):
