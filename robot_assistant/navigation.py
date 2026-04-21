@@ -3,7 +3,7 @@ import time
 import urllib.parse
 
 def navigate_to(place):
-    # σωστό encoding για ελληνικά και διευθύνσεις
+
     destination = urllib.parse.quote(place)
 
     url = (
