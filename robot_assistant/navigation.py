@@ -1,8 +1,16 @@
 import subprocess
 import time
+import urllib.parse
 
 def navigate_to(place):
-    url = f"https://www.google.com/maps/dir/?api=1&destination={place}"
+    # σωστό encoding για ελληνικά και διευθύνσεις
+    destination = urllib.parse.quote(place)
+
+    url = (
+        f"https://www.google.com/maps/dir/?api=1"
+        f"&destination={destination}"
+        f"&travelmode=walking"
+    )
 
     process = subprocess.Popen([
         "chromium-browser",
@@ -12,6 +20,8 @@ def navigate_to(place):
         url
     ])
 
-    time.sleep(8)
+    # δείχνει τον χάρτη για 10 δευτερόλεπτα
+    time.sleep(10)
 
+    # κλείνει και επιστρέφει στο face
     process.terminate()
