@@ -24,6 +24,8 @@ sudo apt install chromium-browser portaudio19-dev python3-tk
 
 pip install pyttsx3 SpeechRecognition pyaudio
 
+pip install opencv-python geopy requests
+
 ## ΕΚΤΕΛΕΣΗ
 python3 main.py
 
